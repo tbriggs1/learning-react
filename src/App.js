@@ -1,18 +1,18 @@
 import React from 'react';
 import TestComponent from './TestComponent';
+import TweetList from './components/TweetList';
+import CreateTweet from './components/CreateTweet'
 
 function App() {
   
-  //Write basic JS code
-  const items = [1, 2, 3, 4, 5];
-
-  items.map((item) => {
-    console.log(item);
-  });
+ const name = 'tom briggs';
+ const message = "I'm pretty tired"
 
   return (
    <div>
      <TestComponent />
+     <CreateTweet />
+     <TweetList name={name} message={message}/>
    </div>
   );
 }
