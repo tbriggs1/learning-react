@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
 
-const CreateTweet = (props) => {
+const CreateTweet = ({tweets, setTweets, textInput, setTextInput}) => {
     //state
-    const [textInput, setTextInput] = useState('');
-    const [tweets, setTweets] = useState([]);
+    
 
     const userInputHandler = (e) => {
         //e.target.value gets the current text that you are typing
