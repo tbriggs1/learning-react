@@ -3,6 +3,7 @@ import TestComponent from './TestComponent';
 import TweetList from './components/TweetList';
 import CreateTweet from './components/CreateTweet'
 
+
 function App() {
   
   const [name, setName] = useState('Tom');
@@ -15,7 +16,7 @@ function App() {
    <div>
      <TestComponent />
      <CreateTweet textInput={textInput} setTextInput={setTextInput} tweets={tweets} setTweets={setTweets} />
-     <TweetList setName={setName} name={name} message={tweets} setTweets={setTweets}/>
+     <TweetList setName={setName} name={name} tweets={tweets} setTweets={setTweets}/>
    </div>
   );
 }
