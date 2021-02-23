@@ -8,11 +8,18 @@ function App() {
  const name = 'tom briggs';
  const message = "I'm pretty tired"
 
+ const sayHelloHandler = (user) => {
+   console.log(`Hello there ${user}`)
+ };
+
+
   return (
    <div>
-     <TestComponent />
+     {/* <TestComponent />
      <CreateTweet />
-     <TweetList name={name} message={message}/>
+     <TweetList name={name} message={message}/> */}
+     <h1>Hello React</h1>
+     <button onClick={() => sayHelloHandler('Mike')}>Click</button>
    </div>
   );
 }
