@@ -1,25 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TestComponent from './TestComponent';
 import TweetList from './components/TweetList';
 import CreateTweet from './components/CreateTweet'
 
 function App() {
   
- const name = 'tom briggs';
- const message = "I'm pretty tired"
+  const [name, setName] = useState('Tom');
 
- const sayHelloHandler = (user) => {
-   console.log(`Hello there ${user}`)
- };
 
+  const message = "Hello";
 
   return (
    <div>
-     {/* <TestComponent />
+     <TestComponent />
      <CreateTweet />
-     <TweetList name={name} message={message}/> */}
-     <h1>Hello React</h1>
-     <button onClick={() => sayHelloHandler('Mike')}>Click</button>
+     <TweetList setName={setName} name={name} message={message}/>}
    </div>
   );
 }
